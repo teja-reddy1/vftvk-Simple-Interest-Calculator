@@ -3,14 +3,56 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+<body>
+    <div class="maindiv">
+        <!-- class name is set to maindiv-->
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
+        <!--heading -->
+        <table>
+            <!--used table for correct alignment-->
+            <tr>
+                <td>Amount</td>
+                <!--this the principal amount the user enters-->
+                <td><input type="number" class="second-column" id="principal" value="" oninput="errorCheck(this.value)"></td>
+                <!--input type is taken as number so that only numbers  are entered id is given to acces data in the javascript-->
+                <!--oninput errorCheck function is executed to check the number entered is positive or not-->
+            </tr>
+            <tr>
+                <td>Interest Rate</td>
+                <td><input type="range" class="second-column" id="rate" min="1" max="20" step="0.25" value="10.25" oninput="sliderChange(this.value)"> <span id="sliderVal">10.25%</span></td>
+                <!--range value step to 0.25 nd the initial value is set to 10.25 and slideChange function diaplays the value of the slider dynamically in the span html element-->
+                <!--second-column tag is used to highlight the required feilds in the result-->
+            </tr>
+            <tr>
+                <td>No. of Years</td>
+                <td>
+                    <select id="years" class="second-column"><!--id is set to yeras to get the jave into javascript function-->
+						<option value="1" selected>1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <button id="btn" onclick="compute()">Compute Interest</button></td>
+        <!-- here onclicking the button compute function is called which diaplays the detailed info about the interest-->
+        <br><br>
+        <span id="result"></span> <br>
+        <!--result is fed into this span tag of id result-->
+        <footer>
+            <p> &#169; Everyone Can Get Rich </p>
+            <!-- copyright tag is given by the &#169-->
+        </footer>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+    <!--script file is integrated-->
+</body>
 </html>
