@@ -1,4 +1,40 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background-color: black;
+    margin: 0px;
+    /*margin is set to 100px inorder to bring the maindiv area center of the webpage*/
+    padding: 0px;
+}
 
+h1 {
+    color: grey;
+    /*h1 styling is done according to the instructions provided*/
+    font-family: verdana;
+}
 
+.maindiv {
+    margin: auto;
+    /*margin  is to auto to auto indent acording to the body margin*/
+    /*maindiv class styling is done according to the instructions provided width is set to 300px border radius is set to 25px and also padding set to 20px with background color as white*/
+    color: black;
+    width: 300px;
+    border: solid;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: white;
+}
+
+.color {
+    background-color: yellow;
+    /*this the color styling used to highlight the result's important data*/
+}
+
+footer {
+    margin: auto;
+    /*this is for the copywrite statement*/
+    width: 300px;
+}
+
+.second-column {
+    margin-left: 15px;
+    /*this styling is used to move the text box further right for the smooth transition of the range slider value to be displayed*/
+}
